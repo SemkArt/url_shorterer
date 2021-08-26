@@ -1,24 +1,21 @@
-# README
+Используем:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version - 3.0.1
+* Rails 6.1.4.1
 
-Things you may want to cover:
+## Шаги установки:
 
-* Ruby version
+* Склонировать репозиторий проекта
 
-* System dependencies
+* Настройка бд:
+  * Создать базы данных и выполнить миграции для development и test окружений:
 
-* Configuration
+    ```
+    bundle exec rake db:create db:migrate
+    RAILS_ENV=test bundle exec rake db:create db:migrate
+    ```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Запустить тесты, что бы убедиться что проект развернут правильно
+  ```
+  bundle exec rspec
+  ```
